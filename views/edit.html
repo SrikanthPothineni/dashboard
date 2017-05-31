@@ -1,0 +1,66 @@
+ <div class="container-fluid">
+
+ <div class="row">
+
+            <section class="col-md-3"></section>
+
+
+            <section class="col-md-6">
+
+            <section class="content-header">
+                    <h1> Personal Information For Update Latest Data: </h1>
+            </section>
+
+                <div class="box box-solid box-default">
+                    <div class="box-body">
+            <form >
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" ng-model="editData.name">
+                </div>
+                <div class="form-group">
+                  <label for="gender">Gender</label>  
+                  <select class="form-control" ng-model="editData.gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="name">Age</label>
+                  <input type="number" class="form-control" ng-model="editData.age">
+                </div>
+                <div class="form-group">
+                  <label for="exampleSelect2">Education</label>
+                  <select class="form-control" ng-model="editData.education">
+                    <option>SSC</option>
+                    <option>HSC</option>
+                    <option>BSc</option>
+                    <option>MSc</option>
+                    <option>MBBS</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="name">Salary</label>
+                  <div class="input-group">
+                  <span class="input-group-addon">$</span>
+                  <input type="number" class="form-control" ng-model="editData.salary">
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-success" ng-click="updateData()">Submit</button>
+                <a ui-sref="home"><button type="submit" class="btn btn-danger">Cancel</button></a>
+
+                </form>
+                    </div><!-- /.box-body -->
+
+                    </div>
+
+                    <div  class="alert {{color}}" ng-if="message">
+                        <strong>{{message}}</strong>
+                    </div>
+
+              </section>
+    </div>
+</div>
